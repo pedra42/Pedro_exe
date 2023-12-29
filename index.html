@@ -1,6 +1,37 @@
 <HTML>
     <center>   
-         <h1>O Site tá Rodando</h1>
+         <h1>Pedro.exe</h1>
+         <br><br>
+        
+         <p>Mande sua mensagem para o Pedro.exe utilizando a caixa a baixo. </p>
+         <br><br>
+        
+         <!--<input type="text" id="Name" name="Name">-->
+         <textarea id="Name" name="Name" rows="4" cols="50">
+            Sua mensagem aqui
+         </textarea>
+         <br><br>
+        
+        <button type="button" onclick="EnviarResposta()">Enviar</button> 
+        
+         <br><br>
+
+        <h2>Resposta do Pedro.exe:</h2>
+         <br>
+         <p id = "Resposta">Resposta</p>
     </center>
 
+
 </HTML>
+<script>
+document.getElementById("Name").value = "Sua mensagem aqui";
+    Array.prototype.random = function () {
+  return this[Math.floor((Math.random()*this.length))];
+}
+
+let lista_de_resposta = ["tá certo", "fica firme", "boa pergunta", "sim..não!talvez.., será?" , "não entendi", "ah sim", "hmmm", "rum", "[piadinha]", "então tá bom", "eu vou viajar pra campos do jordão"];
+function EnviarResposta(){
+    document.getElementById("Resposta").innerHTML = lista_de_resposta.random();
+    document.getElementById("Name").value = "Sua mensagem aqui";
+}
+</script>
